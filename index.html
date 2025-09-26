@@ -1,127 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DG Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio — Featured Projects</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+  <div class="page-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <h1>Deepa Gorrela</h1>
+        <br>
+        <strong>Portfolio</strong>
+      </div>
 
-<body class="home-body">
-    <div class="container-fluid">
-<span></span>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light about-nav">
-            <a class="navbar-brand" href="index.html">Deepa Gorrela</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="index.html">Work</a>
-                    <!-- <a class="nav-item nav-link" href="portfolio.html">Portfolio</a> -->
-                    <a class="nav-item nav-link" href="about.html">About</a>
-                    <a class="nav-item nav-link" href="contact.html">Contact</a>
-                </div>
+      <nav class="side-nav">
+        <ul>
+          <li><a href="index.html" class="active">Portfolio</a></li>
+                 <li><a href="about.html" class="active">About</a></li>
+              <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-note">
+        <div class="socials">
+              <a href="#" aria-label="twitter" class="social">t</a>
+              <a href="#" aria-label="linkedin" class="social">in</a>
+              <a href="#" aria-label="github" class="social">gh</a>
+              <a href="#" aria-label="instagram" class="social">ig</a>
             </div>
-        </nav>
+        <small><p>© 2024 Portfolio</p></small>
+      </div>
+    </aside>
 
-        <div class="card-body card-body--center">
-            
-            <p>lorLorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, sunt. Tempore omnis architecto reprehenderit sequi? Eligendi iusto temporibus earum, unde 
-                inventore ratione harum dicta dignissimos commodi mollitia deserunt, corrupti laboriosam!</p>
+    <main class="content">
+      <section class="projects-section">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="lead">A curated selection of work — click a card to view details.</p>
 
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="thumb placeholder">Project 1</div>
+            <h3>Project 1 — Modern Web Application</h3>
+            <p class="desc">Full-stack web app built with React and Node.js. Click to view details.</p>
+            <a class="btn" href="#">View Project</a>
+          </article>
+
+          <article class="project-card">
+            <div class="thumb placeholder">Project 2</div>
+            <h3>Project 2 — Mobile Banking App</h3>
+            <p class="desc">Intuitive mobile interface with secure flows and modern UX patterns.</p>
+            <a class="btn" href="#">View Project</a>
+          </article>
+
+          <article class="project-card">
+            <div class="thumb placeholder">Project 3</div>
+            <h3>Project 3 — E‑commerce Platform</h3>
+            <p class="desc">E‑commerce with payments, inventory and admin dashboards.</p>
+            <a class="btn" href="#">View Project</a>
+          </article>
+
+          <article class="project-card">
+            <div class="thumb placeholder">Project 4</div>
+            <h3>Project 4 — Brand Identity</h3>
+            <p class="desc">Logo, typography and brand system for a growing product.</p>
+            <a class="btn" href="#">View Project</a>
+          </article>
+
+          <article class="project-card">
+            <div class="thumb placeholder">Project 5</div>
+            <h3>Project 5 — Analytics Dashboard</h3>
+            <p class="desc">Interactive dashboards with charts and KPIs for teams.</p>
+            <a class="btn" href="#">View Project</a>
+          </article>
+
+          <article class="project-card">
+            <div class="thumb placeholder">Project 6</div>
+            <h3>Project 6 — Social Platform</h3>
+            <p class="desc">Community features with real-time messaging and threads.</p>
+            <a class="btn" href="#">View Project</a>
+          </article>
         </div>
 
-            <section id="work" class="section">
-
-                <!-- <h2 class="section-title">Projects</h2> -->
-                <div class="portfolio-grid">
-                    <div class="row">
-                        <div class="portfolio-item">
-                            <div class="card">
-                                <div class="card__content">
-                                    <div class="card__front">
-                                        <!-- <h3 class="card__title"></h3> -->
-                                  <img src=home.jpg style=" border-radius: 20%;
-                                        object-fit: cover; width: 100%; height: 100%;" alt="Project1">
-                                    </div>
-                                    <div class="card__back">
-                                        <img src=home.jpg style=" border-radius: 20%;
-                                        object-fit: cover; width: 100%; height: 100%;" alt="Project1">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item">
-                            <div class="card">
-                                <div class="card__content">
-                                    <div class="card__front">
-                                        <h3 class="card__title">Project2</h3>
-                                        <p class="card__subtitle">Time for some fun</p>
-                                    </div>
-                                    <div class="card__back">
-                                        <p class="card__body">Project2</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item">
-                            <div class="card">
-                                <div class="card__content">
-                                    <div class="card__front">
-                                        <h3 class="card__title">Project3</h3>
-                                        <p class="card__subtitle">Time for some fun</p>
-                                    </div>
-                                    <div class="card__back">
-                                        <p class="card__body">Project3</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="portfolio-item">
-                            <div class="card">
-                                <div class="card__content">
-                                    <div class="card__front">
-                                        <h3 class="card__title">Project4</h3>
-                                        <p class="card__subtitle">Time for some fun</p>
-                                    </div>
-                                    <div class="card__back">
-                                        <p class="card__body">Project4</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-        <footer>
-            <div class="footer-content">
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-behance"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-                <p>&copy; 2025 deepagorrela. All rights reserved.</p>
-            </div>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
+        <!-- <div class="bottom-note">Using Format</div> -->
+      </section>
+    </main>
+  </div>
 </body>
-
 </html>
