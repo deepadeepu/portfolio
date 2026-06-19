@@ -1092,11 +1092,11 @@
 <div class="divider"></div>
 
 <!-- CONTACT -->
-<!-- <section id="contact">
+<section id="contact">
   <div class="contact-eyebrow">Open to opportunities</div>
   <h2 class="contact-heading">Let's build<br /><em>something.</em></h2>
   <p class="contact-sub">Looking for a TPM who brings structure, clarity, and velocity to complex programs? Let's talk.</p>
-
+<!-- 
   <form id="contact-form" class="contact-form">
     <input id="c-name" type="text" placeholder="Your name (optional)" />
     <input id="c-email" type="email" placeholder="Your email" required />
@@ -1105,10 +1105,10 @@
       <button type="submit" class="btn btn-primary">Send Message</button>
       <a href="mailto:deepagrla25@gmail.com" class="btn">Email Directly ↗</a>
     </div>
-  </form>
+  </form> -->
 
   <div class="contact-links">
-    <a href="https://www.linkedin.com/in/deepa90" class="contact-link" target="_blank" rel="noopener">LinkedIn ↗</a> -->
+    <a href="https://www.linkedin.com/in/deepa90" class="contact-link" target="_blank" rel="noopener">LinkedIn ↗</a>
     <a href="mailto:deepagrla25@gmail.com" class="contact-link">deepagrla25@gmail.com</a>
    
   </div>
@@ -1155,17 +1155,17 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-in, .exp-item').forEach(el => obs.observe(el));
 
-  // Contact form
-  // document.getElementById('contact-form').addEventListener('submit', function(e) {
-  //   e.preventDefault();
-  //   const name = document.getElementById('c-name').value.trim();
-  //   const email = document.getElementById('c-email').value.trim();
-  //   const msg = document.getElementById('c-msg').value.trim();
-  //   if (!email || !msg) { alert('Please fill in your email and message.'); return; }
-  //   const sub = encodeURIComponent('Portfolio Inquiry' + (name ? ' from ' + name : ''));
-  //   const body = encodeURIComponent((name ? 'Name: ' + name + '\n' : '') + 'Email: ' + email + '\n\n' + msg);
-  //   window.location.href = 'mailto:deepagrla25@gmail.com?subject=' + sub + '&body=' + body;
-  // });
+  Contact form
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('c-name').value.trim();
+    const email = document.getElementById('c-email').value.trim();
+    const msg = document.getElementById('c-msg').value.trim();
+    if (!email || !msg) { alert('Please fill in your email and message.'); return; }
+    const sub = encodeURIComponent('Portfolio Inquiry' + (name ? ' from ' + name : ''));
+    const body = encodeURIComponent((name ? 'Name: ' + name + '\n' : '') + 'Email: ' + email + '\n\n' + msg);
+    window.location.href = 'mailto:deepagrla25@gmail.com?subject=' + sub + '&body=' + body;
+  });
 </script>
 </body>
 </html>
