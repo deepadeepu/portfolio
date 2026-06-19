@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Deepa Gorrela — Product Manger / Technical program maanger </title>
+  <title>Deepa Gorrela — Product Manager / Technical Program Manager</title>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,400;12..96,700;12..96,800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -12,9 +12,9 @@
       --surface2: #18181f;
       --ink: #eeeae0;
       --muted: #6b6878;
-      --accent: #00e5b0;       /* teal-green — "go signal" */
-      --accent2: #ff6b35;      /* warm orange */
-      --accent3: #a78bfa;      /* violet */
+      --accent: #00e5b0;
+      --accent2: #ff6b35;
+      --accent3: #a78bfa;
       --grid: rgba(255,255,255,0.03);
       --border: rgba(255,255,255,0.07);
       --card: #13131a;
@@ -31,7 +31,6 @@
       cursor: none;
     }
 
-    /* CURSOR */
     #cursor {
       position: fixed; width: 10px; height: 10px;
       background: var(--accent); border-radius: 50%;
@@ -46,7 +45,6 @@
       transition: all 0.25s ease;
     }
 
-    /* GRAIN */
     body::before {
       content: '';
       position: fixed; inset: 0;
@@ -54,7 +52,6 @@
       pointer-events: none; z-index: 9997; opacity: 0.7;
     }
 
-    /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 500;
       display: flex; justify-content: space-between; align-items: center;
@@ -77,7 +74,6 @@
     }
     .nav-links a:hover { color: var(--accent); }
 
-    /* ─── HERO ─── */
     #hero {
       position: relative; z-index: 1;
       min-height: 100vh;
@@ -85,8 +81,6 @@
       padding: 8rem 3rem 4rem;
       overflow: hidden;
     }
-
-    /* animated grid background */
     .hero-grid {
       position: absolute; inset: 0; z-index: 0;
       background-image:
@@ -99,15 +93,12 @@
       position: absolute; inset: 0;
       background: radial-gradient(ellipse 80% 60% at 60% 50%, rgba(0,229,176,0.06) 0%, transparent 70%);
     }
-
-    /* PM lifecycle rings */
     .pm-rings {
       position: absolute;
       right: -80px; top: 50%; transform: translateY(-50%);
       width: 600px; height: 600px;
       opacity: 0; animation: fadeIn 1.2s ease 1s forwards;
     }
-
     .hero-tag {
       font-family: 'Space Mono', monospace;
       font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase;
@@ -119,7 +110,6 @@
       content: ''; display: block;
       width: 40px; height: 1px; background: var(--accent);
     }
-
     .hero-name {
       font-size: clamp(4rem, 9vw, 8.5rem);
       font-weight: 800; line-height: 0.92;
@@ -128,7 +118,6 @@
       opacity: 0; animation: slideUp 0.8s ease 0.35s forwards;
     }
     .hero-name .accent { color: var(--accent); }
-
     .hero-sub {
       font-family: 'Instrument Serif', serif;
       font-size: clamp(1.1rem, 2.5vw, 1.6rem);
@@ -137,13 +126,11 @@
       margin-bottom: 3rem;
       opacity: 0; animation: slideUp 0.8s ease 0.5s forwards;
     }
-
     .hero-metrics {
       display: flex; gap: 3rem; flex-wrap: wrap;
       opacity: 0; animation: slideUp 0.8s ease 0.65s forwards;
       margin-bottom: 3rem;
     }
-    .metric {}
     .metric-num {
       font-size: 2.8rem; font-weight: 800; line-height: 1;
       color: var(--ink);
@@ -154,7 +141,6 @@
       font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
       color: var(--muted); margin-top: 0.3rem;
     }
-
     .hero-cta {
       display: flex; gap: 1rem; flex-wrap: wrap;
       opacity: 0; animation: slideUp 0.8s ease 0.8s forwards;
@@ -175,7 +161,6 @@
     }
     .btn-primary:hover { background: transparent; color: var(--accent); }
 
-    /* ─── SECTION BASE ─── */
     section { position: relative; z-index: 1; padding: 6rem 3rem; }
 
     .sec-label {
@@ -184,10 +169,7 @@
       color: var(--accent); margin-bottom: 1rem;
       display: flex; align-items: center; gap: 1rem;
     }
-    .sec-label::before {
-      content: attr(data-n);
-      font-size: 0.6rem; opacity: 0.5;
-    }
+    .sec-label::before { content: attr(data-n); font-size: 0.6rem; opacity: 0.5; }
     .sec-title {
       font-size: clamp(2.5rem, 5vw, 4rem);
       font-weight: 800; line-height: 1;
@@ -195,12 +177,10 @@
     }
     .sec-title em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; color: var(--accent); }
 
-    /* ─── ABOUT ─── */
     #about { background: var(--surface); }
     .about-grid {
       display: grid; grid-template-columns: 1.2fr 1fr; gap: 6rem; align-items: start;
     }
-
     .about-statement {
       font-family: 'Instrument Serif', serif;
       font-size: clamp(1.3rem, 2.5vw, 1.75rem);
@@ -208,17 +188,9 @@
       margin-bottom: 2rem;
     }
     .about-statement strong { color: var(--accent); font-style: italic; font-weight: 400; }
-
     .about-body {
       font-size: 1rem; line-height: 1.8; color: var(--muted);
       margin-bottom: 1.5rem;
-    }
-
-    /* PM skills as visual pills grid */
-    .skills-title {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 1.5rem;
     }
     .skills-group { margin-bottom: 2rem; }
     .skills-group-label {
@@ -239,14 +211,7 @@
     .pill:hover { border-color: var(--accent); color: var(--accent); }
     .pill.hi { border-color: rgba(0,229,176,0.3); color: rgba(0,229,176,0.7); }
 
-    /* ─── PM LIFECYCLE VISUAL ─── */
-    #lifecycle {
-      background: var(--bg);
-      padding: 5rem 3rem;
-    }
-    .lifecycle-intro {
-      max-width: 600px; margin-bottom: 4rem;
-    }
+    #lifecycle { background: var(--bg); padding: 5rem 3rem; }
     .lifecycle-grid {
       display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px;
       background: var(--border);
@@ -262,8 +227,7 @@
     .lc-phase:hover { background: var(--surface2); }
     .lc-phase::before {
       content: '';
-      position: absolute; bottom: 0; left: 0; right: 0;
-      height: 3px;
+      position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
       background: var(--accent);
       transform: scaleX(0); transform-origin: left;
       transition: transform 0.3s ease;
@@ -274,9 +238,7 @@
       font-size: 0.6rem; color: var(--accent); letter-spacing: 0.15em;
       margin-bottom: 1.2rem;
     }
-    .lc-name {
-      font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.2;
-    }
+    .lc-name { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.2; }
     .lc-tools {
       font-family: 'Space Mono', monospace;
       font-size: 0.6rem; color: var(--muted); line-height: 1.7;
@@ -295,8 +257,6 @@
     }
     .exp-item.visible { opacity: 1; transform: none; }
     .exp-item:last-child { border-bottom: 1px solid var(--border); }
-
-    .exp-left {}
     .exp-dates {
       font-family: 'Space Mono', monospace;
       font-size: 0.68rem; color: var(--accent); letter-spacing: 0.08em;
@@ -310,19 +270,26 @@
       font-family: 'Space Mono', monospace;
       font-size: 0.6rem; color: var(--muted); letter-spacing: 0.08em;
     }
-
-    .exp-right {}
     .exp-role {
-      font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;
-      color: var(--ink);
+      font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; color: var(--ink);
     }
     .exp-desc {
       font-size: 0.95rem; line-height: 1.75; color: var(--muted);
       margin-bottom: 1.25rem; max-width: 680px;
     }
-    .exp-wins {
-      display: flex; flex-wrap: wrap; gap: 0.5rem;
+    .exp-bullets {
+      list-style: none; padding: 0; margin-bottom: 1.25rem;
     }
+    .exp-bullets li {
+      font-size: 0.92rem; line-height: 1.75; color: var(--muted);
+      padding-left: 1.2rem; position: relative; margin-bottom: 0.5rem;
+    }
+    .exp-bullets li::before {
+      content: '→';
+      position: absolute; left: 0;
+      color: var(--accent); font-size: 0.75rem;
+    }
+    .exp-wins { display: flex; flex-wrap: wrap; gap: 0.5rem; }
     .win-badge {
       font-family: 'Space Mono', monospace;
       font-size: 0.62rem; padding: 0.3rem 0.7rem;
@@ -331,7 +298,6 @@
       color: var(--accent);
     }
 
-    /* ─── PROJECTS ─── */
     #projects { background: var(--bg); }
     .projects-grid {
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
@@ -353,7 +319,6 @@
       transition: all 0.2s;
     }
     .proj-card:hover::after { color: var(--accent); transform: translate(4px, -4px); }
-
     .proj-type {
       font-family: 'Space Mono', monospace;
       font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
@@ -365,10 +330,7 @@
       padding-right: 2rem;
     }
     .proj-name em { font-family: 'Instrument Serif', serif; font-style: italic; color: var(--accent2); font-weight: 400; }
-    .proj-desc {
-      font-size: 0.92rem; line-height: 1.7; color: var(--muted);
-      margin-bottom: 1.5rem; flex: 1;
-    }
+    .proj-desc { font-size: 0.92rem; line-height: 1.7; color: var(--muted); margin-bottom: 1.5rem; flex: 1; }
     .proj-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
     .proj-tag {
       font-family: 'Space Mono', monospace;
@@ -392,7 +354,6 @@
     }
     .proj-link:hover { color: var(--accent); border-color: var(--accent); }
 
-    /* ─── CERTIFICATIONS ─── */
     #certs { background: var(--surface); }
     .certs-grid {
       display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;
@@ -417,9 +378,7 @@
       font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase;
       color: var(--accent); margin-bottom: 0.75rem;
     }
-    .cert-name {
-      font-size: 1.1rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.5rem;
-    }
+    .cert-name { font-size: 1.1rem; font-weight: 700; line-height: 1.3; margin-bottom: 0.5rem; }
     .cert-status {
       font-family: 'Space Mono', monospace;
       font-size: 0.62rem; color: var(--muted); letter-spacing: 0.05em;
@@ -432,7 +391,6 @@
       font-size: 1.1rem;
     }
 
-    /* ─── CAPSTONE ─── */
     #capstone {
       background: linear-gradient(160deg, #0d1a2e 0%, #0a0a0f 60%);
       border-top: 1px solid var(--border);
@@ -440,9 +398,7 @@
     .capstone-inner {
       display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
     }
-    .capstone-badge {
-      display: flex; flex-direction: column; align-items: center; gap: 2rem;
-    }
+    .capstone-badge { display: flex; flex-direction: column; align-items: center; gap: 2rem; }
     .g-orb {
       width: 220px; height: 220px;
       background: radial-gradient(circle at 35% 35%, #4285F4, #0d1a2e);
@@ -466,24 +422,14 @@
       font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase;
       color: rgba(127,168,232,0.7); text-align: center;
     }
-
-    .capstone-content {}
     .capstone-meta {
       font-family: 'Space Mono', monospace;
       font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
       color: rgba(127,168,232,0.7); margin-bottom: 1rem;
     }
-    .capstone-title {
-      font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800;
-      line-height: 1.2; margin-bottom: 1.5rem; color: var(--ink);
-    }
-    .capstone-body {
-      font-size: 0.95rem; line-height: 1.8; color: rgba(255,255,255,0.6);
-      margin-bottom: 2rem;
-    }
-    .capstone-phases {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
-    }
+    .capstone-title { font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; line-height: 1.2; margin-bottom: 1.5rem; }
+    .capstone-body { font-size: 0.95rem; line-height: 1.8; color: rgba(255,255,255,0.6); margin-bottom: 2rem; }
+    .capstone-phases { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     .cp-phase {
       background: rgba(255,255,255,0.03);
       border: 1px solid rgba(255,255,255,0.07);
@@ -493,7 +439,6 @@
     .cp-phase-name { font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem; }
     .cp-phase-desc { font-size: 0.8rem; line-height: 1.6; color: rgba(255,255,255,0.5); }
 
-    /* ─── PMP SECTION ─── */
     #pmp { background: var(--surface); }
     .pmp-layout {
       display: grid; grid-template-columns: auto 1fr; gap: 5rem; align-items: center;
@@ -524,7 +469,6 @@
       font-family: 'Space Mono', monospace;
       font-size: 0.45rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted);
     }
-    .pmp-info {}
     .pmp-eyebrow {
       font-family: 'Space Mono', monospace;
       font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
@@ -532,7 +476,6 @@
     }
     .pmp-title { font-size: 2.5rem; font-weight: 800; line-height: 1.1; margin-bottom: 1rem; }
     .pmp-body { font-size: 0.95rem; line-height: 1.8; color: var(--muted); max-width: 580px; }
-
     .pmp-domains { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
     .domain {
       background: var(--card); border: 1px solid var(--border);
@@ -540,22 +483,14 @@
       transition: all 0.3s;
     }
     .domain:hover { border-color: var(--accent); transform: translateY(-3px); }
-    .domain-pct {
-      font-size: 2.5rem; font-weight: 800; color: var(--accent);
-      margin-bottom: 0.25rem;
-    }
+    .domain-pct { font-size: 2.5rem; font-weight: 800; color: var(--accent); margin-bottom: 0.25rem; }
     .domain-name { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
     .domain-desc {
       font-family: 'Space Mono', monospace;
       font-size: 0.6rem; line-height: 1.65; color: var(--muted);
     }
 
-    /* ─── CONTACT ─── */
-    #contact {
-      background: var(--bg);
-      padding: 8rem 3rem;
-      text-align: center;
-    }
+    #contact { background: var(--bg); padding: 8rem 3rem; text-align: center; }
     .contact-eyebrow {
       font-family: 'Space Mono', monospace;
       font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase;
@@ -570,34 +505,8 @@
       letter-spacing: -0.03em; margin-bottom: 2.5rem;
     }
     .contact-heading em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; color: var(--accent); }
-    .contact-sub {
-      font-size: 1.1rem; color: var(--muted); max-width: 500px;
-      margin: 0 auto 3.5rem; line-height: 1.7;
-    }
-    .contact-form {
-      max-width: 640px; margin: 0 auto 2.5rem;
-      display: flex; flex-direction: column; gap: 1rem;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      background: var(--surface); border: 1px solid var(--border);
-      color: var(--ink); padding: 1rem 1.2rem;
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: 0.95rem;
-      transition: border-color 0.2s;
-      outline: none;
-    }
-    .contact-form input:focus,
-    .contact-form textarea:focus { border-color: var(--accent); }
-    .contact-form input::placeholder,
-    .contact-form textarea::placeholder { color: var(--muted); }
-    .contact-form textarea { resize: vertical; }
-    .contact-form-row {
-      display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
-    }
-    .contact-links {
-      display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap;
-    }
+    .contact-sub { font-size: 1.1rem; color: var(--muted); max-width: 500px; margin: 0 auto 3.5rem; line-height: 1.7; }
+    .contact-links { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; }
     .contact-link {
       font-family: 'Space Mono', monospace;
       font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
@@ -618,13 +527,11 @@
       font-size: 0.62rem; color: var(--muted); letter-spacing: 0.05em;
     }
 
-    /* ─── DIVIDER ─── */
     .divider {
       height: 1px;
       background: linear-gradient(90deg, transparent, var(--accent), var(--accent3), transparent);
     }
 
-    /* ─── ANIMATIONS ─── */
     @keyframes slideUp {
       from { opacity: 0; transform: translateY(28px); }
       to { opacity: 1; transform: translateY(0); }
@@ -639,13 +546,13 @@
     }
     .fade-in.visible { opacity: 1; transform: none; }
 
-    /* ─── MOBILE ─── */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { display: none; }
       section { padding: 4rem 1.5rem; }
       #hero { padding: 6rem 1.5rem 3rem; }
-      .about-grid, .capstone-inner, .pmp-layout, .exp-item { grid-template-columns: 1fr; gap: 2rem; }
+      .about-grid, .capstone-inner, .pmp-layout { grid-template-columns: 1fr; gap: 2rem; }
+      .exp-item { grid-template-columns: 1fr; gap: 1rem; }
       .pmp-emblem { margin: 0 auto; }
       .pmp-domains, .projects-grid, .lifecycle-grid { grid-template-columns: 1fr; }
       .hero-metrics { gap: 2rem; }
@@ -659,7 +566,6 @@
 <div id="cursor"></div>
 <div id="cursor-ring"></div>
 
-<!-- NAV -->
 <nav>
   <a href="#hero" class="nav-logo">DG · TPM</a>
   <ul class="nav-links">
@@ -675,30 +581,23 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-grid"></div>
-
-  <!-- PM lifecycle ring SVG -->
   <svg class="pm-rings" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <!-- Outer orbit -->
     <circle cx="300" cy="300" r="260" stroke="rgba(0,229,176,0.08)" stroke-width="1" stroke-dasharray="8 6"/>
     <circle cx="300" cy="300" r="190" stroke="rgba(167,139,250,0.08)" stroke-width="1" stroke-dasharray="6 8"/>
     <circle cx="300" cy="300" r="120" stroke="rgba(255,107,53,0.1)" stroke-width="1"/>
-    <!-- Phase dots on outer ring — Initiate, Plan, Execute, Monitor, Close -->
     <circle cx="300" cy="40" r="8" fill="#00e5b0" opacity="0.9"/>
     <circle cx="540" cy="200" r="8" fill="#a78bfa" opacity="0.9"/>
     <circle cx="466" cy="490" r="8" fill="#ff6b35" opacity="0.9"/>
     <circle cx="134" cy="490" r="8" fill="#4285F4" opacity="0.9"/>
     <circle cx="60" cy="200" r="8" fill="#FBBC05" opacity="0.9"/>
-    <!-- Labels -->
     <text x="300" y="24" text-anchor="middle" font-family="Space Mono" font-size="9" fill="rgba(0,229,176,0.7)" letter-spacing="2">INITIATE</text>
     <text x="558" y="198" font-family="Space Mono" font-size="9" fill="rgba(167,139,250,0.7)" letter-spacing="2">PLAN</text>
     <text x="430" y="510" font-family="Space Mono" font-size="9" fill="rgba(255,107,53,0.7)" letter-spacing="2">EXECUTE</text>
     <text x="60" y="510" font-family="Space Mono" font-size="9" fill="rgba(66,133,244,0.7)" letter-spacing="2">MONITOR</text>
     <text x="10" y="198" font-family="Space Mono" font-size="9" fill="rgba(251,188,5,0.7)" letter-spacing="2">CLOSE</text>
-    <!-- Center -->
     <circle cx="300" cy="300" r="48" fill="rgba(0,229,176,0.06)" stroke="rgba(0,229,176,0.2)" stroke-width="1"/>
     <text x="300" y="294" text-anchor="middle" font-family="Bricolage Grotesque" font-size="10" font-weight="700" fill="rgba(0,229,176,0.8)" letter-spacing="1">PROJECT</text>
     <text x="300" y="310" text-anchor="middle" font-family="Bricolage Grotesque" font-size="10" font-weight="700" fill="rgba(0,229,176,0.8)" letter-spacing="1">SUCCESS</text>
-    <!-- Connecting lines -->
     <line x1="300" y1="48" x2="532" y2="208" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
     <line x1="532" y1="208" x2="458" y2="482" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
     <line x1="458" y1="482" x2="142" y2="482" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
@@ -710,7 +609,6 @@
     <div class="hero-tag">Technical Program Manager</div>
     <h1 class="hero-name">Deepa<br /><span class="accent">Gorrela</span></h1>
     <p class="hero-sub">Turning ambiguous programs into shipped products — from charter to close, I align teams, remove blockers, and drive delivery that actually moves the needle.</p>
-
     <div class="hero-metrics">
       <div class="metric">
         <div class="metric-num">$1<span>M+</span></div>
@@ -725,11 +623,10 @@
         <div class="metric-label">Velocity Improvement</div>
       </div>
       <div class="metric">
-        <div class="metric-num">8<span>+</span></div>
+        <div class="metric-num">9<span>+</span></div>
         <div class="metric-label">Years Delivering</div>
       </div>
     </div>
-
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View Projects</a>
       <a href="#experience" class="btn">Experience ↓</a>
@@ -744,13 +641,12 @@
 <section id="about">
   <div class="sec-label" data-n="01 —">About</div>
   <div class="sec-title">The PM behind<br /><em>the delivery</em></div>
-
   <div class="about-grid">
     <div class="fade-in">
       <p class="about-statement">
         I don't just manage projects — I <strong>orchestrate outcomes</strong>. From translating ambiguous business needs into precise engineering specs to keeping a 50,000-user platform at 100% data accuracy, I live in the space where strategy meets execution.
       </p>
-      <p class="about-body">I'm a Technical Program Manager based in Pasadena, CA. My path from QA engineer → business analyst → product owner → TPM gives me an unusual edge: I can read a sprint board, write acceptance criteria, and have an informed conversation with your architects — all in the same day.</p>
+      <p class="about-body">I'm a Project coordinator, scrum master , product owner , QA Engineer  based in Pasadena, CA. My path from QA engineer → business analyst → product owner  gives me an unusual edge: I can read a sprint board, write acceptance criteria, and have an informed conversation with your architects — all in the same day.</p>
       <p class="about-body">At ADP I drove a $1M cost-savings initiative modernizing a mainframe-to-cloud system. At Candid NGO I owned a scaled e-commerce engineering backlog end-to-end. Currently pursuing my PMP certification through Google's curriculum while sharpening my focus on AI-augmented enterprise program delivery.</p>
     </div>
     <div class="fade-in">
@@ -798,7 +694,6 @@
 <section id="lifecycle">
   <div class="sec-label" data-n="02 —">How I Work</div>
   <div class="sec-title">The PM <em>Lifecycle</em><br />I live in</div>
-
   <div class="lifecycle-grid">
     <div class="lc-phase fade-in">
       <div class="lc-num">01 · Initiate</div>
@@ -830,15 +725,72 @@
 
 <div class="divider"></div>
 
+<!-- EXPERIENCE -->
+<!-- <section id="experience">
+  <div class="sec-label" data-n="03 —">Experience</div>
+  <div class="sec-title">Where I've <em>delivered</em></div>
 
+  <div class="exp-list">
+
+    <!-- Candid NGO -->
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-dates">Jul 2025 – Sep 2025</div>
+        <div class="exp-company">Candid NGO</div>
+        <div class="exp-location">Remote</div>
+      </div>
+      <div class="exp-right">
+        <div class="exp-role">Product Owner / Product Analyst</div>
+        <ul class="exp-bullets">
+          <li>Defined user stories, acceptance criteria, and technical specifications for e-commerce platform features, bridging product and engineering teams.</li>
+          <li>Managed engineering backlog, prioritized features based on business value and technical feasibility, and drove sprint execution for a scalable platform.</li>
+        </ul>
+        <div class="exp-wins">
+          <span class="win-badge">Backlog Ownership</span>
+          <span class="win-badge">E-Commerce</span>
+          <span class="win-badge">Sprint Execution</span>
+          <span class="win-badge">Remote</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADP -->
+    <div class="exp-item">
+      <div class="exp-left">
+        <div class="exp-dates">Nov 2023 – Jun 2025</div>
+        <div class="exp-company">ADP</div>
+        <div class="exp-location">Pasadena, CA</div>
+      </div>
+      <div class="exp-right">
+        <div class="exp-role">Scrum Master / Product Owner</div>
+        <ul class="exp-bullets">
+          <li>Led end-to-end delivery of a mainframe-to-cloud modernization program, contributing to $1M+ in operational cost savings through improved system efficiency and reduced legacy maintenance overhead.</li>
+          <li>Managed cross-functional teams across Product, Engineering, and Data to deliver scalable cloud-based financial data solutions, improving sprint velocity by 20%.</li>
+          <li>Owned full program lifecycle for a platform serving 50,000+ users — roadmap, backlog prioritization, sprint planning, and release management — achieving 100% data accuracy across all launches.</li>
+          <li>Facilitated Agile ceremonies including sprint planning, backlog grooming, and retrospectives; identified and removed blockers to maintain on-time delivery.</li>
+          <li>Collaborated with business and engineering teams to support claims-processing workflows, eligibility validation, accumulator tracking, and data reconciliation within enterprise financial and benefits systems.</li>
+          <li>Assisted in defining and validating business rules, API integrations, and workflow requirements for high-volume transaction processing platforms, ensuring compliance, accuracy, and system reliability.</li>
+        </ul>
+        <div class="exp-wins">
+          <span class="win-badge">$1M+ Cost Savings</span>
+          <span class="win-badge">50K+ Users</span>
+          <span class="win-badge">20% Velocity ↑</span>
+          <span class="win-badge">100% Data Accuracy</span>
+          <span class="win-badge">Cloud Modernization</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+
+<div class="divider"></div>
 
 <!-- PROJECTS -->
 <section id="projects">
   <div class="sec-label" data-n="04 —">Projects</div>
   <div class="sec-title">PM work, <em>live & linked</em></div>
-
   <div class="projects-grid">
-
     <div class="proj-card fade-in">
       <div class="proj-type">Project 01 · E-Commerce</div>
       <div class="proj-name">Project <em>Ecommerce</em> — Checkout Optimization</div>
@@ -853,7 +805,6 @@
       <div class="proj-impact">↗ Target: −15pp Abandonment · &lt;90s Checkout · 6 Sprints</div>
       <a href="https://deepadeepu.github.io/Digital-Ecommerce/" target="_blank" rel="noopener" class="proj-link">View Live Project ↗</a>
     </div>
-
     <div class="proj-card fade-in">
       <div class="proj-type">Project 02 · UX Research</div>
       <div class="proj-name">Walk<em>Safe</em> — Safety Route App</div>
@@ -867,20 +818,18 @@
       <div class="proj-impact">↗ 80% Felt Unsafe · 90% App Adoption Interest</div>
       <a href="https://deepadeepu.github.io/WalkSafeApp-UI-UX-project/" target="_blank" rel="noopener" class="proj-link">View Live Project ↗</a>
     </div>
-
     <div class="proj-card fade-in">
-      <div class="proj-type">Project 03 ·CLEARPLAY+ DYNAMIC CONTENT FILTERS</div>
-      <div class="proj-name"><em>OTT </em> — Product Case Study</div>
-      <p class="proj-desc">What if streaming platforms let you watch everything — on your own terms?</p>
+      <div class="proj-type">Project 03 · OTT Streaming</div>
+      <div class="proj-name"><em>ClearPlay+</em> Dynamic Content Filters</div>
+      <p class="proj-desc">What if streaming platforms let you watch everything — on your own terms? A product case study for OTT dynamic content filtering across 195 countries with cultural variation.</p>
       <div class="proj-tags">
         <span class="proj-tag">PRD</span>
-        <span class="proj-tag"4B+OTT Users Worldwide</span>
-        <span class="proj-tag">68% Families Avoid Popular Shows</span>
-        <span class="proj-tag">195 Countries with Cultural Variation</span>
+        <span class="proj-tag">4B+ OTT Users</span>
+        <span class="proj-tag">68% Families Impacted</span>
+        <span class="proj-tag">195 Countries</span>
       </div>
       <a href="https://deepadeepu.github.io/OTT-Streaming/" target="_blank" rel="noopener" class="proj-link">View Live Project ↗</a>
     </div>
-
     <div class="proj-card fade-in">
       <div class="proj-type">Project 04 · Platform Architecture</div>
       <div class="proj-name">Prism<em>CMS</em> — Content Management Platform</div>
@@ -894,7 +843,6 @@
       <div class="proj-impact">↗ 248 Content Items · 1.2K Media Assets · 12-Person Team</div>
       <a href="https://deepadeepu.github.io/Content-management-sys/" target="_blank" rel="noopener" class="proj-link">View Live Project ↗</a>
     </div>
-
   </div>
 </section>
 
@@ -904,37 +852,31 @@
 <section id="certs">
   <div class="sec-label" data-n="05 —">Credentials</div>
   <div class="sec-title">Earned <em>credentials</em></div>
-
   <div class="certs-grid">
-
     <div class="cert-card fade-in">
       <div class="cert-icon">🏅</div>
       <div class="cert-org">Google · Coursera</div>
-      <div class="cert-name"><a href="https://coursera.org/share/5bbff8470bea243689fa7b2a20dbef8d"style ="color: #eeeae0;" >Google Project Management Certificate</a></div>
+      <div class="cert-name"><a href="https://coursera.org/share/5bbff8470bea243689fa7b2a20dbef8d" style="color:#eeeae0;">Google Project Management Certificate</a></div>
       <div class="cert-status">Certified · May 2026</div>
     </div>
-
     <div class="cert-card fade-in">
       <div class="cert-icon">🔖</div>
       <div class="cert-org">Scrum Alliance</div>
-      <div class="cert-name"><a href="https://bcert.me/sdljxvvta" style ="color: #eeeae0;">Certified Scrum Master®</a> (CSM)</div>
+      <div class="cert-name"><a href="https://bcert.me/sdljxvvta" style="color:#eeeae0;">Certified Scrum Master®</a> (CSM)</div>
       <div class="cert-status">Certified</div>
     </div>
-
     <div class="cert-card fade-in">
       <div class="cert-icon">📋</div>
       <div class="cert-org">Scrum.org</div>
-      <div class="cert-name"><a href="https://www.scrum.org/user/1547321" style ="color: #eeeae0;">Professional Scrum Product Owner™ </a>(PSPO)</div>
+      <div class="cert-name"><a href="https://www.scrum.org/user/1547321" style="color:#eeeae0;">Professional Scrum Product Owner™</a> (PSPO)</div>
       <div class="cert-status">Certified</div>
     </div>
-
     <div class="cert-card fade-in">
       <div class="cert-icon">🤖</div>
       <div class="cert-org">Coursera · IBM</div>
       <div class="cert-name">AI Product Management</div>
       <div class="cert-status">Pursuing · May 2026</div>
     </div>
-
   </div>
 </section>
 
@@ -944,12 +886,9 @@
 <section id="capstone">
   <div class="sec-label" data-n="06 —">Capstone</div>
   <div class="sec-title">Google PM <em>Capstone</em></div>
-
   <div class="capstone-inner">
     <div class="capstone-badge fade-in">
-      <div class="g-orb">
-        <span class="g-letter">G</span>
-      </div>
+      <div class="g-orb"><span class="g-letter">G</span></div>
       <div class="g-label">Google Project Management<br/>Professional Certificate</div>
     </div>
     <div class="capstone-content fade-in">
@@ -988,7 +927,6 @@
 <section id="pmp">
   <div class="sec-label" data-n="07 —">Certification Journey</div>
   <div class="sec-title">PMP <em>in progress</em></div>
-
   <div class="pmp-layout">
     <div class="pmp-emblem fade-in">
       <div class="pmp-inner">
@@ -1003,7 +941,6 @@
       <p class="pmp-body">The PMP from the Project Management Institute is the gold standard globally. I'm completing the required 35 education hours via Google's PM Certificate and documenting 36 months of verified project leadership experience — bridging formal methodology with real enterprise delivery.</p>
     </div>
   </div>
-
   <div class="pmp-domains">
     <div class="domain fade-in">
       <div class="domain-pct">42%</div>
@@ -1030,12 +967,9 @@
   <div class="contact-eyebrow">Open to opportunities</div>
   <h2 class="contact-heading">Let's build<br /><em>something.</em></h2>
   <p class="contact-sub">Looking for a TPM who brings structure, clarity, and velocity to complex programs? Let's talk.</p>
-
-
   <div class="contact-links">
     <a href="https://www.linkedin.com/in/deepa90" class="contact-link" target="_blank" rel="noopener">LinkedIn ↗</a>
     <a href="mailto:deepagrla25@gmail.com" class="contact-link">deepagrla25@gmail.com</a>
-   
   </div>
 </section>
 
@@ -1079,18 +1013,6 @@
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-in, .exp-item').forEach(el => obs.observe(el));
-
-  Contact form
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const name = document.getElementById('c-name').value.trim();
-    const email = document.getElementById('c-email').value.trim();
-    const msg = document.getElementById('c-msg').value.trim();
-    if (!email || !msg) { alert('Please fill in your email and message.'); return; }
-    const sub = encodeURIComponent('Portfolio Inquiry' + (name ? ' from ' + name : ''));
-    const body = encodeURIComponent((name ? 'Name: ' + name + '\n' : '') + 'Email: ' + email + '\n\n' + msg);
-    window.location.href = 'mailto:deepagrla25@gmail.com?subject=' + sub + '&body=' + body;
-  });
 </script>
 </body>
 </html>
